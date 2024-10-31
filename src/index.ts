@@ -39,7 +39,6 @@ async function handleRequest(request: Request, env: Env) {
 
 		// Create new request to Pexels
 		const pexelsUrl = new URL(requestUrl.pathname + requestUrl.search, pexelsBaseUrl);
-		console.log('Forwarding to Pexels:', pexelsUrl.toString());
 
 		const pexelsRequest = new Request(pexelsUrl, {
 			method: request.method,
